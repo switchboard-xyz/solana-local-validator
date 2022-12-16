@@ -1,0 +1,27 @@
+name: Test Workflow
+
+on:
+  push:
+    paths:
+      - "action.yaml"
+      - ".github/workflows/**"
+
+jobs:
+  test_workflow:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - name: Start Local Validator
+        uses: ./
+        with:
+          solana-version: v1.14.10
+          anchor-version: v0.26.0
+          cluster: devnet
+
+      - name: Test Local Validator
+        shell: bash
+        run: |
+          curl -sS http://localhost:8899 -X POST -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1, "method":"getBlockHeight"}'
