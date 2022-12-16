@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Start Local Validator
-        uses: switchboard-xyz/solana-local-validator-action@v1
+        uses: switchboard-xyz/solana-local-validator@v0.1
         with:
           solana-version: stable
           anchor-version: v0.26.0
@@ -52,7 +52,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Start Local Validator
-        uses: switchboard-xyz/solana-local-validator-action@v1
+        uses: switchboard-xyz/solana-local-validator@v0.1
         with:
           solana-version: v1.14.10
           anchor-version: v0.26.0
