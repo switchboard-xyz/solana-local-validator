@@ -5,6 +5,10 @@ mainnet, or all features enabled. See
 [scfsd](https://github.com/FrankC01/solana-gadgets/tree/main/rust/scfsd) for
 more info.
 
+This action will cache the installed versions. It may take up to 10min to build
+the full toolchain on the first run and/or when the `solana-version` or
+`anchor-version` are modified.
+
 ## Inputs
 
 | Variable       | Default   | Description                                                                                                                                                                                                       |
