@@ -1,7 +1,9 @@
 # Solana Local Validator GH Action
 
 Start a local Solana validator with a feature set mirrored from devnet, testnet,
-mainnet, or all features enabled.
+mainnet, or all features enabled. See
+[scfsd](https://github.com/FrankC01/solana-gadgets/tree/main/rust/scfsd) for
+more info.
 
 ## Inputs
 
